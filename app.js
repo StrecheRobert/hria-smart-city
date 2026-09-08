@@ -23,20 +23,20 @@ const stations = {
     transmission: "MQTT"
   },
 
-  S2: {
-    id: "S2",
-    name: "BEIA Consult International",
-    location: "București, Sector 1",
-    type: "Stație fizică IoT",
-    lat: 44.445,
-    lon: 26.090,
-    temperature: 24.1,
-    humidity: 54,
-    pm25: 22.7,
-    pm10: 37.9,
-    status: "online",
-    transmission: "MQTT"
-  },
+   S2: {
+     id: "S2",
+     name: "BEIA Consult International",
+     location: "Strada Peroni 16, București",
+     type: "Stație fizică IoT",
+     lat: 44.387,
+     lon: 26.103,
+     temperature: 24.1,
+     humidity: 54,
+     pm25: 22.7,
+     pm10: 37.9,
+     status: "online",
+     transmission: "MQTT"
+   },
 
   V1: {
     id: "V1",

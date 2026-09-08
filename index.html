@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>IA – Orașe Inteligente</title>
+  <title>HRIA Smart City</title>
 
   <!-- Leaflet CSS -->
   <link
@@ -22,10 +22,14 @@
   <header class="topbar">
     <div class="brand">
 
-      <div class="logo-mark">AI</div>
+      <img
+        src="hria-logo.png"
+        alt="HRIA Logo"
+        class="brand-logo"
+      >
 
       <div>
-        <h1>IA – Orașe Inteligente</h1>
+        <h1>HRIA Smart City</h1>
         <p>
           Platformă de monitorizare, analiză și predicție a calității mediului
         </p>
@@ -55,16 +59,10 @@
 
           <h2>Monitorizarea inteligentă a mediului</h2>
 
-          <p>
-            Platforma integrează date provenite de la două stații IoT de
-            monitorizare: una amplasată în Slănic Prahova și una la
-            BEIA Consult International, în București.
-          </p>
-
-          <p>
-            Datele sunt transmise prin MQTT, stocate în InfluxDB și utilizate
-            pentru vizualizare, analiză și dezvoltarea serviciilor experimentale
-            de predicție bazate pe inteligență artificială.
+          <p class="text-justify">
+            Rețea demonstrativă pentru monitorizarea parametrilor de mediu,
+            vizualizarea datelor colectate și dezvoltarea unor servicii
+            experimentale de analiză și predicție.
           </p>
         </div>
 
@@ -86,7 +84,7 @@
 
             <div>
               <h3>Harta stațiilor de monitorizare</h3>
-              <p>
+              <p class="text-justify">
                 Selectează o stație pentru a vedea valorile curente.
               </p>
             </div>
@@ -136,7 +134,6 @@
 
           <div class="metrics-grid">
 
-            <!-- Temperature -->
             <div class="metric">
               <div class="metric-label">
                 Temperatură
@@ -148,8 +145,6 @@
               </div>
             </div>
 
-
-            <!-- Humidity -->
             <div class="metric">
               <div class="metric-label">
                 Umiditate
@@ -161,8 +156,6 @@
               </div>
             </div>
 
-
-            <!-- PM2.5 -->
             <div class="metric">
               <div class="metric-label">
                 PM2.5
@@ -174,8 +167,6 @@
               </div>
             </div>
 
-
-            <!-- PM10 -->
             <div class="metric">
               <div class="metric-label">
                 PM10
@@ -190,7 +181,6 @@
           </div>
 
 
-          <!-- Station metadata -->
           <div class="station-meta">
 
             <div>
@@ -203,7 +193,6 @@
               </span>
             </div>
 
-
             <div>
               <span class="meta-label">
                 Tip stație
@@ -214,7 +203,6 @@
               </span>
             </div>
 
-
             <div>
               <span class="meta-label">
                 Transmisie
@@ -224,7 +212,6 @@
                 MQTT
               </span>
             </div>
-
 
             <div>
               <span class="meta-label">
@@ -258,7 +245,7 @@
 
           <h2>Stații active</h2>
 
-          <p>
+          <p class="text-justify">
             Rețeaua demonstrativă include două puncte fizice de monitorizare
             și o stație virtuală experimentală.
           </p>
@@ -269,8 +256,6 @@
 
       <div class="stations-grid">
 
-
-        <!-- S1 -->
         <div
           class="station-overview-card"
           data-station="S1"
@@ -286,7 +271,7 @@
               Slănic Prahova
             </h3>
 
-            <p>
+            <p class="text-justify">
               Stație IoT pentru monitorizarea parametrilor de mediu.
             </p>
 
@@ -300,7 +285,6 @@
         </div>
 
 
-        <!-- S2 -->
         <div
           class="station-overview-card"
           data-station="S2"
@@ -316,7 +300,7 @@
               BEIA Consult International
             </h3>
 
-            <p>
+            <p class="text-justify">
               București – stație IoT de monitorizare ambientală.
             </p>
 
@@ -330,7 +314,6 @@
         </div>
 
 
-        <!-- VIRTUAL -->
         <div
           class="station-overview-card virtual-card"
           data-station="V1"
@@ -346,9 +329,9 @@
               Stație virtuală
             </h3>
 
-            <p>
-              Punct experimental pentru estimarea parametrilor
-              într-o locație fără senzor fizic.
+            <p class="text-justify">
+              Punct experimental pentru estimarea parametrilor într-o
+              locație fără senzor fizic.
             </p>
 
             <div class="station-small-info">
@@ -383,7 +366,7 @@
             Date istorice
           </h2>
 
-          <p>
+          <p class="text-justify">
             Vizualizarea seriilor temporale colectate de stațiile IoT.
           </p>
 
@@ -396,10 +379,7 @@
 
         <div class="chart-toolbar">
 
-
-          <!-- station selector -->
           <div>
-
             <label for="history-station">
               Stație
             </label>
@@ -418,8 +398,6 @@
 
           </div>
 
-
-          <!-- parameter selector -->
           <div>
 
             <label for="history-parameter">
@@ -448,8 +426,6 @@
 
           </div>
 
-
-          <!-- period selector -->
           <div>
 
             <label for="history-period">
@@ -472,11 +448,8 @@
 
         </div>
 
-
         <div class="chart-wrapper">
-
           <canvas id="historyChart"></canvas>
-
         </div>
 
       </div>
@@ -503,7 +476,7 @@
             Predicție experimentală – următoarele 24h
           </h2>
 
-          <p>
+          <p class="text-justify">
             Modul demonstrativ pentru estimarea evoluției parametrilor
             de mediu pe baza datelor istorice colectate.
           </p>
@@ -517,8 +490,6 @@
 
         <div class="prediction-controls">
 
-
-          <!-- Prediction station -->
           <div>
 
             <label for="prediction-station">
@@ -543,8 +514,6 @@
 
           </div>
 
-
-          <!-- Prediction parameter -->
           <div>
 
             <label for="prediction-parameter">
@@ -569,8 +538,6 @@
 
           </div>
 
-
-          <!-- Prediction Button -->
           <button
             id="generate-prediction"
             class="primary-button"
@@ -580,13 +547,9 @@
 
         </div>
 
-
         <div class="chart-wrapper">
-
           <canvas id="predictionChart"></canvas>
-
         </div>
-
 
         <div class="experimental-note">
 
@@ -594,7 +557,7 @@
             Predicție experimentală
           </strong>
 
-          <p>
+          <p class="text-justify">
             Funcționalitatea este utilizată pentru testarea metodelor de
             inteligență artificială și va fi îmbunătățită pe baza datelor
             colectate de infrastructura IoT.
@@ -627,13 +590,13 @@
             Stație virtuală de monitorizare
           </h2>
 
-          <p>
+          <p class="text-justify">
             Conceptul de stație virtuală permite estimarea parametrilor
             de mediu pentru o locație în care nu există o stație fizică
             de monitorizare.
           </p>
 
-          <p>
+          <p class="text-justify">
             În versiunea demonstrativă a platformei, valorile virtuale
             sunt estimate pe baza informațiilor disponibile de la
             stațiile IoT și a datelor istorice. Ulterior, această
@@ -667,7 +630,7 @@
             Asistent virtual
           </h2>
 
-          <p>
+          <p class="text-justify">
             Interfață demonstrativă pentru accesarea rapidă a informațiilor
             disponibile în platformă.
           </p>
@@ -679,8 +642,6 @@
 
       <div class="card assistant-card">
 
-
-        <!-- CHAT -->
         <div
           id="chat-messages"
           class="chat-messages"
@@ -702,7 +663,6 @@
         </div>
 
 
-        <!-- QUICK QUESTIONS -->
         <div class="quick-questions">
 
           <button
@@ -711,20 +671,17 @@
             Compară PM2.5
           </button>
 
-
           <button
             data-question="Care stație are cea mai mare valoare PM2.5?"
           >
             Cel mai mare PM2.5
           </button>
 
-
           <button
             data-question="Cum este calitatea aerului la Slănic?"
           >
             Calitatea aerului în Slănic
           </button>
-
 
           <button
             data-question="Care este prognoza PM2.5 pentru următoarele 24 de ore?"
@@ -735,7 +692,6 @@
         </div>
 
 
-        <!-- CHAT INPUT -->
         <div class="chat-input-area">
 
           <input
@@ -765,7 +721,6 @@
       <div class="section-heading small-heading">
 
         <div>
-
           <span class="eyebrow">
             PLATFORM ARCHITECTURE
           </span>
@@ -773,7 +728,6 @@
           <h2>
             Fluxul datelor
           </h2>
-
         </div>
 
       </div>
@@ -781,91 +735,52 @@
 
       <div class="tech-stack">
 
+        <div class="tech-item">
+          <strong>Stații IoT</strong>
+          <span>Achiziție date</span>
+        </div>
+
+        <div class="tech-arrow">→</div>
 
         <div class="tech-item">
-
-          <strong>
-            Stații IoT
-          </strong>
-
-          <span>
-            Achiziție date
-          </span>
-
+          <strong>MQTT</strong>
+          <span>Transmisie în timp real</span>
         </div>
 
-
-        <div class="tech-arrow">
-          →
-        </div>
-
+        <div class="tech-arrow">→</div>
 
         <div class="tech-item">
-
-          <strong>
-            MQTT
-          </strong>
-
-          <span>
-            Transmisie în timp real
-          </span>
-
+          <strong>InfluxDB</strong>
+          <span>Stocare time-series</span>
         </div>
 
-
-        <div class="tech-arrow">
-          →
-        </div>
-
+        <div class="tech-arrow">→</div>
 
         <div class="tech-item">
-
-          <strong>
-            InfluxDB
-          </strong>
-
-          <span>
-            Stocare time-series
-          </span>
-
+          <strong>Node-RED</strong>
+          <span>API & integrare</span>
         </div>
 
-
-        <div class="tech-arrow">
-          →
-        </div>
-
+        <div class="tech-arrow">→</div>
 
         <div class="tech-item">
-
-          <strong>
-            Node-RED
-          </strong>
-
-          <span>
-            API & integrare
-          </span>
-
+          <strong>Web Platform</strong>
+          <span>Monitorizare & AI</span>
         </div>
 
-
-        <div class="tech-arrow">
-          →
-        </div>
+      </div>
 
 
-        <div class="tech-item">
-
-          <strong>
-            Web Platform
-          </strong>
-
-          <span>
-            Monitorizare & AI
-          </span>
-
-        </div>
-
+      <div class="card description-card">
+        <h3>Descriere platformă</h3>
+        <p class="text-justify">
+          Platforma integrează date provenite de la două stații IoT de
+          monitorizare: una amplasată în Slănic Prahova și una la
+          BEIA Consult International, în București. Datele sunt transmise
+          prin MQTT, stocate în InfluxDB și utilizate pentru vizualizare,
+          analiză și dezvoltarea serviciilor experimentale de predicție
+          bazate pe inteligență artificială.
+        </p>
       </div>
 
     </section>
@@ -894,12 +809,10 @@
     src="https://cdn.jsdelivr.net/npm/chart.js"
   ></script>
 
-
   <!-- LEAFLET -->
   <script
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
   ></script>
-
 
   <!-- APPLICATION JS -->
   <script src="app.js"></script>

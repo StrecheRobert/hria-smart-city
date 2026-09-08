@@ -26,10 +26,10 @@ const stations = {
    S2: {
      id: "S2",
      name: "BEIA Consult International",
-     location: "Strada Peroni 16, București",
+     location: "Strada Peroni 12, București",
      type: "Stație fizică IoT",
-     lat: 44.380,
-     lon: 26.128,
+     lat: 44.395862,
+     lon: 26.102572,
      temperature: 24.1,
      humidity: 54,
      pm25: 22.7,
